@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ingredient extends Model
 {
-    protected $fillable = ['name', 'stock'];
+    protected $fillable = ['name', 'stock','total_latest_inserted_stock'];
 
     public function products()
     {

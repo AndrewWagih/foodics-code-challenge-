@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('stock')->comment('in grams');
+            $table->integer('total_latest_inserted_stock')->comment('in grams');
             $table->timestamps();
         });
     }
