@@ -21,6 +21,15 @@ class OrderController extends Controller
         $this->productService = $productService;
     }
 
+    public function index(Request $request)
+    {
+        $orders = $this->orderService->index();
+
+        return $this->successWithPaginationResource(data:ViewOrderResource::collection($orders));
+
+
+    }
+
     public function store(StoreOrderRequest $request)
     {
         $this->productService->checkStock($request->all());

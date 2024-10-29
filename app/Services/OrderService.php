@@ -20,6 +20,11 @@ class OrderService
         $this->productRepository = $productRepository;
     }
 
+    public function index()
+    {
+        return $this->orderRepository->index();
+    }
+
     public function store($data)
     {
         DB::beginTransaction();

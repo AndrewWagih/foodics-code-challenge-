@@ -16,4 +16,9 @@ class OrderRepository extends GenericRepository
         return $this->model->with('products')->find($id);
     }
 
+    public function index()
+    {
+        return $this->model->with('products')->latest()->paginate(10);
+    }
+
 }

@@ -39,7 +39,7 @@ trait RespondsWithHttpStatus
         ], $status);
     }
 
-    protected function successWithPaginationResource($message, $data = [], $status = Response::HTTP_OK)
+    protected function successWithPaginationResource($message='The operation has been completed successfully', $data = [], $status = Response::HTTP_OK)
     {
         // Access the paginator instance from the resource collection
         $paginator = $data->resource;
