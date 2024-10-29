@@ -13,6 +13,16 @@ class ProductService
         $this->productRepository = $productRepository;
     }
 
+    public function getAllProducts()
+    {
+        return $this->productRepository->paginate();
+    }
+
+    public function findWithIngredients($id)
+    {
+        return $this->productRepository->findWithIngredients($id);
+    }
+
     public function checkStock($data)
     {
         $products = [];

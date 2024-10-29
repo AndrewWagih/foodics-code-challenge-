@@ -61,6 +61,11 @@ class GenericRepository implements IGenericRepository
         return  $this->model->with($relations)->get();
     }
 
+    public function getWithRelationsPaginate($relations,$limit=10)
+    {
+        return  $this->model->with($relations)->paginate($limit);
+    }
+
     public function where($column, $value = null)
     {
         $query = $this->model->newQuery();

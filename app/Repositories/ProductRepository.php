@@ -11,4 +11,9 @@ class ProductRepository extends GenericRepository
         parent::__construct($model);
     }
 
+    public function findWithIngredients($id)
+    {
+        return $this->model->with('ingredients')->find($id);
+    }
+
 }

@@ -17,18 +17,18 @@ class IngredientSeeder extends Seeder
         $ingredients = [
             [
                 'name' => 'Beef',
-                'stock' => 300,
-                'total_latest_inserted_stock' => 300
+                'stock' => 50000,
+                'total_latest_inserted_stock' => 50000
             ],
             [
                 'name' => 'Cheese',
-                'stock' => 300,
-                'total_latest_inserted_stock' => 300
+                'stock' => 40000,
+                'total_latest_inserted_stock' => 40000
             ],
             [
                 'name' => 'Onion',
-                'stock' => 300,
-                'total_latest_inserted_stock' => 300
+                'stock' => 30000,
+                'total_latest_inserted_stock' => 30000
             ],
         ];
         foreach($ingredients as $ingredient)
