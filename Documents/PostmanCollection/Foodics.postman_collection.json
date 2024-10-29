@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "07086139-5a56-4ea3-95da-08ca9b0c5cf5",
+		"name": "Foodics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5272271"
+	},
+	"item": [
+		{
+			"name": "Store Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\n        {\n            \"product_id\": 1,\n            \"quantity\": 1\n        }\n] }"
+				},
+				"url": {
+					"raw": "{{url}}order",
+					"host": [
+						"{{url}}order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list of orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\n        {\n            \"product_id\": 1,\n            \"quantity\": 1\n        }\n] }"
+				},
+				"url": {
+					"raw": "{{url}}orders",
+					"host": [
+						"{{url}}orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list of producrt",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\n        {\n            \"product_id\": 1,\n            \"quantity\": 1\n        }\n] }"
+				},
+				"url": {
+					"raw": "{{url}}products",
+					"host": [
+						"{{url}}products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\n        {\n            \"product_id\": 1,\n            \"quantity\": 1\n        }\n] }"
+				},
+				"url": {
+					"raw": "{{url}}products/1",
+					"host": [
+						"{{url}}products"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8000/api/",
+			"type": "string"
+		}
+	]
+}
